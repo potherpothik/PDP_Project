@@ -1,23 +1,13 @@
 <!doctype html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>PDP Project</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-        .carousel-item img {
-            height: 450px;
-            object-fit: scale-down;
-        }
-    </style>
+    <title>Mobile Shop - Product Details</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="static/css/style.css">
 </head>
-
 <body>
     <!-- Header -->
     <header>
@@ -41,115 +31,116 @@
         </nav>
     </header>
 
-    <!-- Main Content -->
-    <div class="container my-5">
-        <div class="row">
-            <!-- Column 1: Product Image -->
+    <div class="container my5">
+        <!-- Product Details -->
+        <div class="row mb4">
+            <!-- Column 1: Product Image Carousel -->
             <div class="col-md-6">
-                <div id="carouselExample" class="carousel slide">
+                <div id="productCarousel" class="carousel slide">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="images/cell1.jpg" class="d-block w-100" alt="cell1">
+                            <img src="images/10t-black-500x500.webp" class="dblock w100" alt="Honor X8b">
                         </div>
                         <div class="carousel-item">
-                            <img src="images/cell2.jpg" class="d-block w-100" alt="cell2">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="images/cell3.jpg" class="d-block w-100" alt="cell3">
+                            <img src="images/10t-green-500x500.webp" class="dblock w100" alt="Honor X8b">
                         </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
+                    <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
                     </button>
                 </div>
             </div>
 
-            <!-- Column 2: Product Description -->
+            <!-- Column 2: Product Info -->
             <div class="col-md-6">
-                <h1>Smart Home Security Camera</h1>
-                <p class="lead">Advanced protection for your home and peace of mind</p>
-
-                <div class="my-4">
-                    <h3 class="text-primary">$200.99</h3>
-                    <button class="btn btn-success">Add to Cart</button>
+                <h1 class="producttitle">Honor X8b (8/512GB)</h1>
+                <p class="productsubtitle">Premium midrange smartphone with stunning display</p>
+                
+                <div class="pricesection">
+                    <h3 class="price">29,999৳</h3>
+                    <span class="originalprice"><s>31,731৳</s></span>
+                    <span class="stockstatus instock">In Stock</span>
                 </div>
 
-                <div>
+                <div class="features">
                     <h4>Key Features</h4>
-                    <ul>
-                        <li>4K Ultra HD Video Resolution</li>
-                        <li>180-Degree Wide-Angle Lens</li>
-                        <li>Night Vision up to 30 Feet</li>
-                        <li>AI-Powered Motion Detection</li>
-                        <li>Cloud and Local Storage Options</li>
+                    <ul class="featureslist">
+                        <li>Display: 6.7" AMOLED, 1200 nits (HBM), 90Hz</li>
+                        <li>Processor: Snapdragon 680 4G (6nm)</li>
+                        <li>Camera: Triple 108+5+2 MP, 50MP Selfie</li>
+                        <li>Features: Side Fingerprint, 35W Fast Charging</li>
                     </ul>
+                </div>
+
+                <div class="purchaseoptions">
+                    <div class="quantityselector">
+                        <button class="btn btnsecondary">-</button>
+                        <input type="number" value="1" min="1" class="formcontrol">
+                        <button class="btn btnsecondary">+</button>
+                    </div>
+                    <button class="btn btn-success">Add to Cart</button>
                 </div>
             </div>
         </div>
 
-        <!-- Accordion -->
-        <div class="row" id="products">
+        <!-- Accordion Section -->
+        <div class="row">
             <div class="col-12">
-                <div class="accordion" id="accordionExample">
+                <div class="accordion" id="productAccordion">
+                    <!-- Product Description -->
                     <div class="accordion-item">
                         <h2 class="accordion-header">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#description">
                                 Product Description
                             </button>
                         </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse show"
-                            data-bs-parent="#accordionExample">
+                        <div id="description" class="accordion-collapse collapse show" data-bs-parent="#productAccordion">
                             <div class="accordion-body">
-                                <p>Our Smart Home Security Camera offers cutting-edge surveillance technology. Designed
-                                    for
-                                    both indoor and outdoor use, it provides crystal-clear video monitoring with
-                                    advanced
-                                    features to keep your home protected.</p>
-                                <p>Equipped with AI-powered motion detection, the camera can distinguish between people,
-                                    vehicles, and other moving objects, sending real-time alerts to your smartphone. The
-                                    180-degree wide-angle lens ensures comprehensive coverage of your space.</p>
+                                <p>The Honor X8b represents the perfect balance of performance and value. With its stunning 6.7" AMOLED display featuring 1200 nits peak brightness and smooth 90Hz refresh rate, every interaction is a visual treat. The powerful Snapdragon 680 processor ensures smooth multitasking and efficient performance.</p>
+                                <p>The triple camera system, headlined by a 108MP main sensor, captures stunning details in any lighting condition. The 50MP selfie camera ensures your self-portraits are always social media-ready. With 35W fast charging and a side-mounted fingerprint sensor, the Honor X8b combines convenience with security.</p>
                             </div>
                         </div>
                     </div>
 
+                    <!-- Technical Specifications -->
                     <div class="accordion-item">
                         <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#specifications">
                                 Technical Specifications
                             </button>
                         </h2>
-                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div id="specifications" class="accordion-collapse collapse" data-bs-parent="#productAccordion">
                             <div class="accordion-body">
-                                <table class="table">
-                                    <tr>
-                                        <td>Resolution</td>
-                                        <td>4K (3840 x 2160)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Field of View</td>
-                                        <td>180 degrees</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Connectivity</td>
-                                        <td>Wi-Fi, Ethernet</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Storage</td>
-                                        <td>Cloud & 128GB Local SD Card</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Power</td>
-                                        <td>Rechargeable Battery or Continuous Power</td>
-                                    </tr>
+                                <table class="table table-striped">
+                                    <tbody>
+                                        <tr>
+                                            <td>Display</td>
+                                            <td>6.7" AMOLED, 1200 nits, 90Hz refresh rate</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Processor</td>
+                                            <td>Qualcomm Snapdragon 680 4G (6nm)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>RAM & Storage</td>
+                                            <td>8GB RAM, 512GB Storage</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Camera Setup</td>
+                                            <td>Triple Rear: 108MP + 5MP + 2MP, Front: 50MP</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Battery & Charging</td>
+                                            <td>35W Fast Charging Support</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Security</td>
+                                            <td>Side-mounted Fingerprint Scanner</td>
+                                        </tr>
+                                    </tbody>
                                 </table>
                             </div>
                         </div>
@@ -169,7 +160,7 @@
                 <a href="#"><i class="fa-brands fa-linkedin fa-2x"></i></a>
             </div>
 
-            <p>&copy; 2024 Tech Security. All Rights Reserved.</p>
+            <p>&copy; 2024 Mobile Shop. All Rights Reserved.</p>
 
             <div>
                 <a href="#" class="text-dark me-3">Privacy Policy</a>
@@ -179,10 +170,6 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
-
